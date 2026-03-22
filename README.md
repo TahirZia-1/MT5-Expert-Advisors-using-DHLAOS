@@ -38,10 +38,6 @@ While the current implementation is entirely software-based, there is ongoing in
 - **Order Filling Modes Fixed**: Addressed `ORDER_FILLING_FOK`, `ORDER_FILLING_IOC`, and `ORDER_FILLING_RETURN` issues that previously prevented trades from executing on certain brokers.
 - **Broker Compatibility**: Verified and tested to work out-of-the-box on **Pepperstone** demo accounts.
 
-## 📊 Backtesting Results
-
-Empirical proof of the strategy's viability is provided in the [`/results`](https://github.com/TahirZia-1/MT5-Expert-Advisors-using-DHLAOS/tree/master/results) folder. This directory contains screenshots of our backtesting setups, parameters, and equity curves (even on demo accounts) to demonstrate the soundness of the DHLAOS logic and order execution fixes.
-
 ## 📥 Installation
 
 1. Download the latest `.ex5` and `.mq5` files from the links above.
