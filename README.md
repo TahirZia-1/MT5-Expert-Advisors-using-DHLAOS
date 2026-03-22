@@ -23,10 +23,24 @@ The most up-to-date and fully functional version of the EA, optimized and fixed 
 
 By combining these two, the strategy aims to capture short-term price movements effectively.
 
+## 🏗️ Technical Architecture
+
+The bot is designed to handle market data efficiently:
+- **Tick Data Handling**: The EA uses the `OnTick` function to process incoming price updates (ticks) in real time. It retrieves historical price data and current bid/ask prices to evaluate entry and exit conditions on every tick.
+- **Andean Oscillator Calculation**: The Andean Oscillator is calculated by separating the price action into bullish and bearish components over a specified period. The EA utilizes built-in or custom indicator functions (`iCustom` or direct calculation algorithms) to calculate the signal lines dynamically based on the high and low prices of the asset.
+
+## 🔬 Future Research: Hardware Acceleration
+
+While the current implementation is entirely software-based, there is ongoing interest in **Hardware Acceleration**. Specifically, future research will explore offloading the intensive calculations of complex indicators—like the Andean Oscillator—to **FPGA-based DSP (Digital Signal Processing) modules**. This approach has the potential to drastically reduce execution time and decrease latency, leading to faster trade execution in high-frequency scalping scenarios.
+
 ## 🛠️ Key Fixes & Improvements
 
 - **Order Filling Modes Fixed**: Addressed `ORDER_FILLING_FOK`, `ORDER_FILLING_IOC`, and `ORDER_FILLING_RETURN` issues that previously prevented trades from executing on certain brokers.
 - **Broker Compatibility**: Verified and tested to work out-of-the-box on **Pepperstone** demo accounts.
+
+## 📊 Backtesting Results
+
+Empirical proof of the strategy's viability is provided in the [`/results`](https://github.com/TahirZia-1/MT5-Expert-Advisors-using-DHLAOS/tree/master/results) folder. This directory contains screenshots of our backtesting setups, parameters, and equity curves (even on demo accounts) to demonstrate the soundness of the DHLAOS logic and order execution fixes.
 
 ## 📥 Installation
 
@@ -47,3 +61,4 @@ A massive thank you to the original author **[Geraked](https://github.com/gerake
 **USE AT YOUR OWN RISK**: Trading financial instruments involves a high level of risk, and there are no guarantees of profit. Markets are highly volatile, and past performance is not indicative of future results.
 
 **Not Financial Advice**: The EAs and strategies presented in this repository do not constitute financial advice. Conduct your own research and backtesting before making any trading decisions. You assume full responsibility for your trading activities.
+
